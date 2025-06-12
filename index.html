@@ -8,7 +8,7 @@
    <title>Feliz dia dos namorados</title>
    <style>
       
-      * {
+   * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
@@ -18,36 +18,47 @@ body {
    max-width: 1200px;
    margin: 0 auto;
    background: white;
-   background-size: cover;
-   background-position: center;
-   width: 100vw;
-   height: 100vh;
 }
-.header {
-   background: rosybrown; 
-   margin: 0;
-   padding: 0;
+.meio {
+   max-width: 1200px;
    height: 100px;
+   margin: 0 auto;
    display: flex;
-   justify-content: center;
+   justify-content: space-between;
    align-items: center;
    padding: 10px;
+}
+.header {
+   background: linear-gradient(to right, red, blue); 
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
+   z-index: 1000;
 }
 .header h1 {
    margin: 0;
    text-align: center;
    color: white;
-   font-size: 20px;
+   font-size: 30px;
+}
+#data {
+   background: green;
+   padding: 10px 15px;
+   border-radius: 30px;
+   color: white;
+   font-weight: bold;
+   box-shadow: 2px 2px 6px #595959;
 }
 .feliz {
    text-align: center;
-   margin: 30px 0;
+   margin: 150px 0 30px 0;
    display: block;
    background: linear-gradient(to right, red, blue);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
    padding: 10px;
-   font-size: 40px;
+   font-size: 40px; 
 }
 .frase {
    margin: 0;
@@ -131,7 +142,10 @@ body {
 </head>
 <body>
    <header class="header">
-      <h1>Maria & João</h1>
+     <div class="meio">
+        <h1>Maria & João</h1>
+        <span id="data"></span>
+     </div>
    </header>
    <h2 class="feliz">Feliz dia dos Namorados</h2>
    <p class="frase">Um amor como o nosso não cabe em palavras… então coloquei em fotos e vídeos.</p>
@@ -215,6 +229,7 @@ body {
       <span>2025 todos os direitos reservados</span>
    </footer>
    <!-- área do acesso de login -->
+   <script src="presente.js"></script>
    <!-- <script>
       
   // Verifica se está logado
