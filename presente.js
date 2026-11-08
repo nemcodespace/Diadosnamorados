@@ -9,7 +9,7 @@ function atualizarHora(){
 
    const segundos = String(horario.getSeconds()).padStart(2,"0")
    
-   document.getElementById("data").innerHTML = `${hora}:${minutos}`
+   document.getElementById("data").innerHTML = `${hora}:${minutos}:${segundos}`
    
 }
 setInterval(atualizarHora, 1000)
